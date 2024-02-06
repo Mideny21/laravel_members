@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('position');
+            $table->string('title')->nullable();
             $table->timestamps();
-            
+
         });
     }
 

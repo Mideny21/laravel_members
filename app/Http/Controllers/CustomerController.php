@@ -23,12 +23,14 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         $customer = Customer::create([
+
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
             'address' => $request->input('address'),
             'phone_number' => $request->input('phone_number')
+
         ]);
 
         return response()->json(['data' => $customer, 'message' => 'Successfully'], 201);
